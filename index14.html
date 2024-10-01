@@ -5,3 +5,16 @@
 <style>body{font-family: Roboto;}</style>
 <p style="text-decoration: line-through;">line-through</p>
 <p style="text-decoration: blink;">blink</p>
+<style>
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .blink {
+        animation: blink 1s infinite;
+    }
+</style>
+
+<p class="blink">This text blinks using CSS animations!</p>
