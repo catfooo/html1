@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Example</title>
+    <style>
+        body {
+            position: relative; /* Set the body to relative positioning */
+        }
+
+        .text {
+            position: relative; /* Make .text relative for absolute positioning of .katt */
+            z-index: 1; /* Ensure .text is above .katt */
+        }
+
+        .text:focus {
+            color: transparent; /* Make 'cat' invisible when focused */
+        }
+
+        .katt {
+            display: none; /* Initially hide 'katt' */
+            position: absolute; /* Position .katt absolutely */
+            left: 0; /* Align to the left of .text */
+            top: 0; /* Align to the top of .text */
+            z-index: 0; /* Ensure .katt is below .text */
+        }
+
+        .text:focus + .katt {
+            display: inline; /* Show 'katt' when .text is focused */
+        }
+    </style>
+</head>
+<body>
+    <span tabindex="0" class="text">cat</span> <!-- Focusable element -->
+    <span class="katt">katt</span> <!-- Immediately following sibling -->
+</body>
+</html>
