@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lang Example</title>
+    <style>
+        .cat:focus { 
+            color: transparent; /* Makes "cat" text transparent when focused */
+        }
+        .cat:focus + .katt { 
+            display: inline; /* Shows "katt" when "cat" is focused */
+            left: 0; 
+            color: brown !important; /* Attempt to set color to brown */
+        }
+        .katt { 
+            display: none; /* Initially hides "katt" */
+            position: absolute; /* Positions "katt" absolutely */
+        }
+        .cat { 
+            position: relative; /* Sets position relative for "cat" */
+        }
+        body { 
+            position: relative; /* Sets position relative for body */
+        }
+        span:lang(sv) { 
+            color: cadetblue; /* Sets color for "katt" in Swedish */
+        }
+    </style>
+</head>
+<body>
+    <span class="cat" tabindex="0" lang="en">cat</span>
+    <span class="katt" lang="sv">katt</span>
+</body>
+</html>
