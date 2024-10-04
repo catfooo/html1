@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Example</title>
+    <style>
+        .text:focus {
+            color: transparent; /* Make 'cat' invisible when focused */
+        }
+
+        .katt {
+            display: none; /* Initially hide 'katt' */
+        }
+
+        .text:focus + .katt {
+            display: inline; /* Show 'katt' when .text is focused */
+        }
+    </style>
+</head>
+<body>
+    <span tabindex="0" class="text">cat</span> <!-- Focusable element -->
+    <span class="katt">katt</span> <!-- Immediately following sibling -->
+</body>
+</html>
