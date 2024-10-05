@@ -20,5 +20,33 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    input[type="submit"]{font-size: 0.8em;background-color: darkgreen; color: bisque;border-radius: 5px;border: none;}
+    input[type="submit"]{font-size: 0.8em;background-color: darkgreen; color: bisque;border-radius: 5px;border: none;}form{ /* Resetting Margins and Paddings */
+    margin: 0;               /* Removes any default margin */
+    padding: 0;              /* Removes any default padding */
+    
+    /* Resetting Borders */
+    border: none;            /* Removes any default border */
+    border-width: 0;         /* Ensures border width is zero */
+    border-style: none;      /* Ensures there is no border style */
+    border-color: transparent; /* Makes border color transparent */
+    
+    /* Resetting Background */
+    background: transparent; /* Removes default background */
+    
+    /* Resetting Box Model */
+    box-sizing: border-box;  /* Ensure padding and border are included in the width and height */
+    
+    /* Resetting Font Properties */
+    font-family: inherit;    /* Inherit font family from the parent */
+    font-size: inherit;      /* Inherit font size from the parent */
+    font-weight: inherit;    /* Inherit font weight from the parent */
+    line-height: inherit;    /* Inherit line height from the parent */
+    
+    /* Resetting Width and Height */
+    width: auto;             /* Allows elements to have default width */
+    height: auto;            /* Allows elements to have default height */
+    
+    /* Resetting Display Properties */
+    display: block;          /* Sets display to block for all form elements */
+}
 </style>
