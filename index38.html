@@ -1,0 +1,61 @@
+<html lang="sv"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktformulär</title>
+<style>
+    body {
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #45a049;
+    }
+</style></head>
+
+
+<body>
+
+    <h1>Kontaktformulär - HTML &amp; CSS</h1>
+
+    <form action="">
+
+        <label for="name">Namn</label>
+        <input type="text" id="name" placeholder="Förnamn Efternamn" class="form-control" required="">
+
+        <label for="email">Email</label> <br>
+        <input type="email" id="email" placeholder="name@example.com" class="form-control" required="">
+
+        <label for="message">Meddelande</label><br>
+        <textarea id="message" rows="3" required="" class="form-control"></textarea>
+
+        <input type="submit" class="btn form-control" value="Skicka">
+
+    </form>
+
+
+
+</body></html>
