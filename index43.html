@@ -1,0 +1,21 @@
+<style>
+    div div {
+        float: left;
+        border: 1px solid seagreen;
+    }
+
+    div {
+        border: 1px solid saddlebrown;
+    }
+
+    div::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+<h6>float</h6>
+<div>
+    <div>box</div>
+    <div>box</div>
+</div>
