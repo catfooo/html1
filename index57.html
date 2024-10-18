@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+        /* Only apply this rule when the screen is small */
+        @media (max-width: 464px) {
+            img {
+                width: 200px; /* Force the image to be 200px wide on small screens */
+            }
+        }
+        /* For large screens, set the width to 1200px */
+        @media (min-width: 650px) {
+            img {
+                width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>The picture Element</h2>
+
+<picture>
+<!--
+  <source media="(min-width: 650px)" srcset="img_girl.jpg 1200w">
+  -->
+  <source media="(min-width: 465px)" srcset="img_girl.jpg 600w">
+  <!--
+  <source media="(max-width: 464px)" srcset="img_girl.jpg 200w">
+  -->
+  <img src="img_girl.jpg">
+</picture>
+
+<p>Resize the browser to see different versions of the picture loading at different viewport sizes.
+The browser looks for the first source element where the media query matches the user's current viewport width,
+and fetches the image specified in the srcset attribute.</p>
+
+<p>The img element is required as the last child tag of the picture declaration block.
+The img element is used to provide backward compatibility for browsers that do not support the picture element, or if none of the source tags matched.
+</p>
+
+</body>
+</html>
+
